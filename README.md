@@ -1,6 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
-### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA.
-## My Expertise
+### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
+## 🛠️ Languages and Tools:
 <p>
   <img alt="vscode" src="https://img.shields.io/badge/-VS Code-007ACC?style=for-the-badge-square&logo=visualstudiocode&logoColor=white" height="25"/>
   <img alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge-square&logo=html5&logoColor=white" height="25"/>
@@ -14,7 +14,7 @@
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
-**👨‍💻 My services **
+## 👨‍💻 My services
 
 Do you need an eCommerce website or custom Shopify development?
 Unlike other developers, I only work with Shopify and my focus areas are store setups and theme development.<br /><br />
