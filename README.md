@@ -10,11 +10,10 @@
   <img alt="shopify" src="https://img.shields.io/badge/-Shopify-97CA00?style=for-the-badge-square&logo=shopify&logoColor=white" height="25"/>
   <img alt="liquid" src="https://img.shields.io/badge/-Liquid-62AFD3?style=for-the-badge-square&logo=rainmeter&logoColor=white" height="25"/>
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge-square&logo=git&logoColor=white" height="25"/>
-  <img alt="c" src="https://img.shields.io/badge/-Based Languages-A8B9CC?style=for-the-badge-square&logo=c&logoColor=white" height="25"/>
-  <img alt="python" src="https://img.shields.io/badge/-Python-1a73e8?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
+  <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" height="25"/>
+  <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
-#
-3C43C2
+
 <!--
 **SoftWherePear/Softwherepear** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
