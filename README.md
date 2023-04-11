@@ -14,6 +14,24 @@
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
+**👨‍💻 My services** 
+
+Do you need an eCommerce website or custom Shopify development?
+Unlike other developers, I only work with Shopify and my focus areas are store setups and theme development.<br /><br />
+Did you work with other Developers/Designers who were not able to fix your issues? [Contact me!](https://google.com) I can help and if I can't, no worries.<br /> There will be no charges made. I will make sure you are happy with the outcome before getting billed.<br /><br />
+Here are some common tasks I’m asked to help with, but really anything you might need assistance with I can help.
+
+> 🏪 Complete store setups
+ > 
+> 🧭 Store migrations (Woo-commerce, Big Commerce ...)
+ > 
+> 🎨 Theme customizations
+ > 
+> ⚙️ Third-party app integrations
+ > 
+> 🚀 Performance Optimizations
+ > 
+
 <!--
 **SoftWherePear/Softwherepear** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
