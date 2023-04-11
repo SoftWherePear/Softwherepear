@@ -8,7 +8,7 @@
   <img alt="react" src="https://img.shields.io/badge/-React-45b8d8?style=for-the-badge-square&logo=react&logoColor=white" />
   <img alt="shopify liquid" src="https://img.shields.io/badge/-Shopify Liquid-97CA00?style=for-the-badge-square&logo=shopify&logoColor=white" />
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge-square&logo=git&logoColor=white" />
-  <img alt="c" src="https://img.shields.io/badge/-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" />
+  <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" />
   <img alt="python" src="https://img.shields.io/badge/-Python-1a73e8?style=for-the-badge-square&logo=python&logoColor=white" />
 
   
