@@ -1,8 +1,9 @@
-### Hi there 👋
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
-
+### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="./united-states.png" width="13"> CA, US.
 ## My Expertise
 <p>
+  #007ACC
+  <img alt="vscode" src="https://img.shields.io/badge/-VS Code-E34F26?style=for-the-badge-square&logo=visualstudiocode&logoColor=white" height="25"/>
   <img alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge-square&logo=html5&logoColor=white" height="25"/>
   <img alt="css" src="https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge-square&logo=css3&logoColor=white" height="25"/>
   <img alt="js" src="https://img.shields.io/badge/-JavaScript-F7B93E?style=for-the-badge-square&logo=javascript&logoColor=white" height="25"/>
