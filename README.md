@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-## My tools of choice
+## My Expertise
 <p>
   <img alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge-square&logo=html5&logoColor=white" />
   <img alt="css" src="https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge-square&logo=css3&logoColor=white" />
@@ -10,10 +10,6 @@
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge-square&logo=git&logoColor=white" />
   <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" />
   <img alt="python" src="https://img.shields.io/badge/-Python-1a73e8?style=for-the-badge-square&logo=python&logoColor=white" />
-
-  
-  
-  
 </p>
 
 <!--
