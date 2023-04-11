@@ -2,7 +2,7 @@
 
 ## My Expertise
 <p>
-  <img alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge-square&logo=html5&logoColor=white" />
+  <img height="30"alt="html5" src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge-square&logo=html5&logoColor=white" />
   <img alt="css" src="https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge-square&logo=css3&logoColor=white" />
   <img alt="js" src="https://img.shields.io/badge/-JavaScript-F7B93E?style=for-the-badge-square&logo=javascript&logoColor=white" />
   <img alt="react" src="https://img.shields.io/badge/-React-45b8d8?style=for-the-badge-square&logo=react&logoColor=white" />
