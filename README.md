@@ -14,7 +14,7 @@
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
-##👨‍💻 My services 
+##👨‍💻 My services ##
 
 Do you need an eCommerce website or custom Shopify development?
 Unlike other developers, I only work with Shopify and my focus areas are store setups and theme development.<br /><br />
