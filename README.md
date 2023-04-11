@@ -6,7 +6,8 @@
   <img alt="css" src="https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge-square&logo=css3&logoColor=white" />
   <img alt="js" src="https://img.shields.io/badge/-JavaScript-F7B93E?style=for-the-badge-square&logo=javascript&logoColor=white" />
   <img alt="react" src="https://img.shields.io/badge/-React-45b8d8?style=for-the-badge-square&logo=react&logoColor=white" />
-  <img alt="shopify liquid" src="https://img.shields.io/badge/-Shopify Liquid-97CA00?style=for-the-badge-square&logo=shopify&logoColor=white" />
+  <img alt="liquid" src="https://img.shields.io/badge/-Liquid-62AFD3?style=for-the-badge-square&logo=rainmeter&logoColor=white" />
+  <img alt="shopify" src="https://img.shields.io/badge/-Shopify-97CA00?style=for-the-badge-square&logo=shopify&logoColor=white" />
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge-square&logo=git&logoColor=white" />
   <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" />
   <img alt="python" src="https://img.shields.io/badge/-Python-1a73e8?style=for-the-badge-square&logo=python&logoColor=white" />
