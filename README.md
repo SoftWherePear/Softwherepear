@@ -8,7 +8,7 @@
   <img alt="css" src="https://img.shields.io/badge/-CSS3-007ACC?style=flat-square&logo=css3&logoColor=white" />
   <img alt="js" src="https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=white" />
   <img alt="react" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
-  <img alt="liquid" src="https://img.shields.io/badge/-Liquid-FFFFFF?style=flat-square&logo=shopify-liquid&logoColor=white" />
+  <img alt="liquid" src="https://img.shields.io/badge/-Liquid-FFFFFF?style=flat-square&logo=shopify-liquid&logoColor=blue" />
   
   
 </p>
