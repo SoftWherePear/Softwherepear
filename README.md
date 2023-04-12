@@ -49,10 +49,12 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 <br/>
 [![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&theme=vue##gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
 
-[![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+[![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&area=true&area_color=81FF00&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF)](https://github.com/Ashutosh00710/github-readme-activity-graph)
 <img src="" width="100%"/>
 area_color
 area
+
+
 <!--
 ads-juicy-fresh (Theme) codeSTACKr
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
