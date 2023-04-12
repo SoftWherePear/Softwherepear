@@ -14,6 +14,9 @@
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
+## 📈 Developer Stats
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&theme=ads-juicy-fresh&mode=weekly)](https://git.io/streak-stats)
+
 ## 👨‍💻 Services
 
 Do you need an eCommerce website or custom Shopify development?
