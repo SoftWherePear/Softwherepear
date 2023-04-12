@@ -15,7 +15,12 @@
 </p>
 
 ## 📈 Developer Stats
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&theme=ads-juicy-fresh&mode=weekly)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&theme=ads-juicy-fresh&hide_border=true&mode=weekly&card_width=500#gh-dark-mode-only)](https://git.io/streak-stats)
+<br/>
+[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&theme=chartreuse-dark&hide_border=true&hide=stars,prs,commits,contribs&card_width=495#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
+
+
+
 
 ## 👨‍💻 Services
 
@@ -36,6 +41,8 @@ Here are some common tasks I’m asked to help with, but really anything you mig
  > 
 
 <!--
+ads-juicy-fresh (Theme) codeSTACKr
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 **SoftWherePear/Softwherepear** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
