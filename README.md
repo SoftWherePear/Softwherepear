@@ -1,4 +1,11 @@
+<p align="center">
+  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
+  <a href="https://github.com/DenverCoder1/readme-typing-svg">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=97C50F&vCenter=true&pause=1000&size=22" /></a>
+</p>
+
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
+
 ### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
 ## 🧠 My Expertise
 <p>
@@ -10,7 +17,7 @@
   <img alt="shopify" src="https://img.shields.io/badge/-Shopify-97CA00?style=for-the-badge-square&logo=shopify&logoColor=white" height="25"/>
   <img alt="liquid" src="https://img.shields.io/badge/-Liquid-62AFD3?style=for-the-badge-square&logo=rainmeter&logoColor=white" height="25"/>
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge-square&logo=git&logoColor=white" height="25"/>
-  <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=c&logoColor=white" height="25"/>
+  <img alt="c" src="https://img.shields.io/badge/-Based Languages-3C43C2?style=for-the-badge-square&logo=codio&logoColor=white" height="25"/>
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
@@ -41,6 +48,11 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-light-mode-only)](https://git.io/streak-stats#gh-light-mode-only)
 <br/>
 [![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&theme=vue##gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
+
+[![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+<img src="" width="100%"/>
+area_color
+area
 <!--
 ads-juicy-fresh (Theme) codeSTACKr
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
