@@ -1,12 +1,23 @@
+<!-- Dark Mode -->
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=97C50F&vCenter=true&pause=1000&size=22" /></a>
+  <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-dark-mode-only">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=97C50F&vCenter=true&pause=1000&size=22#gh-dark-mode-only" /></a>
 </p>
+
+<!-- Light Mode -->
+<div style="border: 2px solid black">
+<p align="center">
+  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
+  <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-light-mode-only">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=41B883&vCenter=true&pause=1000&size=22#gh-light-mode-only" /></a>
+</p>
+</div>
 
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
 
 ### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
+
 ## 🧠 My Expertise
 <p>
   <img alt="vscode" src="https://img.shields.io/badge/-VS Code-007ACC?style=for-the-badge-square&logo=visualstudiocode&logoColor=white" height="25"/>
