@@ -15,11 +15,14 @@
 </p>
 
 ## 📈 Developer Stats
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&theme=ads-juicy-fresh&hide_border=true&mode=weekly&card_width=500#gh-dark-mode-only)](https://git.io/streak-stats)
+<!-- Dark Mode -->
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only)](https://git.io/streak-stats#gh-dark-mode-only)
 <br/>
-[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&theme=chartreuse-dark&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
-
-
+[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+<!-- Light Mode -->
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-light-mode-only)](https://git.io/streak-stats#gh-light-mode-only)
+<br/>
+[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&theme=vue##gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
 
 ## 👨‍💻 Services
 
