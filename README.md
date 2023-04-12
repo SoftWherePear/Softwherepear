@@ -14,21 +14,11 @@
   <img alt="python" src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge-square&logo=python&logoColor=white" height="25"/>
 </p>
 
-## 📈 Developer Stats
-<!-- Dark Mode -->
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only)](https://git.io/streak-stats#gh-dark-mode-only)
-<br/>
-[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
-<!-- Light Mode -->
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-light-mode-only)](https://git.io/streak-stats#gh-light-mode-only)
-<br/>
-[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&theme=vue##gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
-
-## 👨‍💻 Services
+## 👨‍💻 Services to You
 
 Do you need an eCommerce website or custom Shopify development?
 Unlike other developers, I only work with Shopify and my focus areas are store setups and theme development.<br /><br />
-Did you work with other Developers/Designers who were not able to fix your issues? [Contact me!](https://google.com) I can help and if I can't, no worries.<br /> There will be no charges made. I will make sure you are happy with the outcome before getting billed.<br /><br />
+Did you work with other Developers/Designers who were not able to fix your issues? <!--[Contact me!](https://google.com) --> I can help and if I can't, no worries.<br /> There will be no charges made. I will make sure you are happy with the outcome before getting billed.<br /><br />
 Here are some common tasks I’m asked to help with, but really anything you might need assistance with I can help.
 
 > 🏪 Complete store setups
@@ -42,6 +32,15 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 > 🚀 Performance Optimizations
  > 
 
+## 📈 Developer Stats
+<!-- Dark Mode -->
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only)](https://git.io/streak-stats#gh-dark-mode-only)
+<br/>
+[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+<!-- Light Mode -->
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-light-mode-only)](https://git.io/streak-stats#gh-light-mode-only)
+<br/>
+[![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&theme=vue##gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
 <!--
 ads-juicy-fresh (Theme) codeSTACKr
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
