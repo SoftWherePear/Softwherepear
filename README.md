@@ -1,6 +1,6 @@
 <p align="center">
-  <img alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_dark.gif#gh-dark-mode-only">
-  <img alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
+  <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_dark.gif#gh-dark-mode-only">
+  <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
 </p>
 
 <!-- Dark Mode -->
