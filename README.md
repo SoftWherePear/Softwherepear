@@ -1,4 +1,8 @@
-<img src="/profile_banner" alt="Profile Banner"/>
+<p align="center">
+  <img alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_dark.gif#gh-dark-mode-only">
+  <img alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
+</p>
+
 <!-- Dark Mode -->
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
@@ -7,13 +11,11 @@
 </p>
 
 <!-- Light Mode -->
-<div style="border: 2px solid black">
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
   <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-light-mode-only">
     <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=41B883&vCenter=true&pause=1000&size=22#gh-light-mode-only" /></a>
 </p>
-</div>
 
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
 
