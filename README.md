@@ -60,6 +60,16 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 [![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&area=true&area_color=81FF00&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF#gh-dark-mode-only)](https://github.com/Ashutosh00710/github-readme-activity-graph#gh-dark-mode-only)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only)](https://git.io/streak-stats#gh-dark-mode-only)
 [![Stats Rating](https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+
+<p align="center">
+  <a width="50%" href="https://git.io/streak-stats#gh-light-mode-only">
+    <img alt="Profile Banner" src="https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-light-mode-only">
+  </a>
+  <a width="50%" href="https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only">
+    <img alt="Profile Banner" src="https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-light-mode-only">
+  </a>
+</p>
+
 <!-- Light Mode -->
 [![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&theme=vue&color=000000&title_color=41B883&bg_color=FFFFFF&point=41B883&area=true&area_color=41B883#gh-light-mode-only)](https://github.com/Ashutosh00710/github-readme-activity-graph#gh-light-mode-only)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-light-mode-only)](https://git.io/streak-stats#gh-light-mode-only)
