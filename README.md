@@ -1,7 +1,7 @@
-<p align="center">
+<!-- <p align="center">
   <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_dark.gif#gh-dark-mode-only">
   <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
-</p>
+</p> -->
 
 <!-- Dark Mode -->
 <p align="center">
@@ -19,7 +19,9 @@
 
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
 
-### Welcome to my page. I'm Alexander, a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
+### Welcome to my page. I'm a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
+
+I've been coding for 8+ years, so I definitely have mastery over all the skills for Shopify developement. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real.
 
 ## 🧠 My Expertise
 <p>
