@@ -67,7 +67,7 @@ Here are some common tasks I’m asked to help with, but really anything you mig
     <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only">
   </a>
   <a href="https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only">
-    <img alt="Stats Rating" src="https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=495&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only">
+    <img alt="Stats Rating" src="https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=350&title_color=FF5700&ring_color=81FF00&icon_color=6562AF&bg_color=0D0C15&theme=chartreuse-dark#gh-dark-mode-only">
   </a>
 </p>
 
@@ -80,7 +80,7 @@ Here are some common tasks I’m asked to help with, but really anything you mig
     <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-dark-mode-only">
   </a>
   <a href="https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only">
-    <img alt="Stats Rating" src="https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=450&theme=vue##gh-light-mode-only">
+    <img alt="Stats Rating" src="https://github-readme-stats.vercel.app/api?username=Softwherepear&custom_title=Stats%20Rating&count_private=true&show_icons=true&hide_border=true&hide=stars,prs,commits,contribs&card_width=300&theme=vue##gh-light-mode-only">
   </a>
 </p>
 
