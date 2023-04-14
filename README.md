@@ -23,6 +23,8 @@
 
 I've been coding for 8+ years, so I definitely have mastery over all the skills for Shopify developement. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 👍
 
+⚡ Fun facts: I love to rock climb 🧗 and surf 🏄‍♂️
+
 ## 🧠 My Expertise
 <p>
   <img alt="vscode" src="https://img.shields.io/badge/-VS Code-007ACC?style=for-the-badge-square&logo=visualstudiocode&logoColor=white" height="25"/>
