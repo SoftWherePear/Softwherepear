@@ -21,7 +21,7 @@
 
 ### Welcome to my page. I'm a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
 
-I've been coding for 8+ years, so I definitely have mastery over all the skills for Shopify developement. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 👍
+I've been coding for 8+ years, so I definitely have mastery over all the skills for Shopify developement. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 😁👍
 
 ⚡ Fun fact: I love to rock climb 🧗 and surf 🏄‍♂️
 
@@ -85,7 +85,6 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 </p>
 
 <!--
-ads-juicy-fresh (Theme) codeSTACKr
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 **SoftWherePear/Softwherepear** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
