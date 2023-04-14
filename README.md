@@ -3,6 +3,12 @@
   <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
 </p> -->
 
+<!-- <p align="center">
+   <a href="https://github.com/DavidWells/advanced-markdown/blame/master/svg-with-css.svg">
+    <img alt="Click to see the source" height="400" src="https://raw.githubusercontent.com/DavidWells/advanced-markdown/master/svg-with-css.svg" width="800" />
+  </a>
+</p> -->
+
 <!-- Dark Mode -->
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
