@@ -1,6 +1,8 @@
 <svg fill="none" viewBox="0 0 800 400" width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fira+Mono&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Fira+Mono&display=swap');
         text {
             font-family: 'Carter One';
             letter-spacing: 10px;
