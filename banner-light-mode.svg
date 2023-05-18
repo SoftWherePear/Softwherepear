@@ -10,7 +10,7 @@
                 }
         
                 p, span {
-                    font-family: 'Fira Mono';
+                    font-family: 'Fira Mono', monospace;;
                     font-size: 16px;
                     line-height: 20px;
                 }
@@ -127,27 +127,12 @@
                 const initRowPosX = 2;
 
                 var textStrings = [];
-               
-
-                var options = {
-                    strings: htmlStrings,
-                    typeSpeed: 70,
-                    smartBackspace: false,
-                    backDelay: 2000,
-                    loop: true,
-                    onStringTyped: function (pos, self) { 
-                        self.typeSpeed = randRange(50, 80);
-                        self.backDelay = randRange(700, 3000);
-                        self.backSpeed = randRange(0, 30);
-                        self.startDelay = 0; 
-                    },
-                };
             </script>
         </div>
     </foreignObject>
     <style>
         text {
-            font-family: 'Carter One';
+            font-family: 'Carter One', cursive;
             letter-spacing: 10px;
             stroke: #000;
             font-size: 150px;
