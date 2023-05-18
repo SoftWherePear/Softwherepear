@@ -90,7 +90,137 @@
             </style>
         </div>
         <div id="body" xmlns="http://www.w3.org/1999/xhtml">
+            <foreignObject width="100%" height="100%">
+        <div id="head">
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    /* color: #fff; */
+                }
+        
+                p, span {
+                    font-family: 'Fira Mono', monospace;;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                #body {
+                    /* background: #0D1117; #282c34 */
+                    width: 100%;
+                    height: 100%;
+                    background-color: #000;
+                }
+        
+                #background {
+                    overflow: hidden;
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    filter: blur(2px);
+                }
             
+                #grid {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: #fff;
+                    display: grid;
+                    grid-auto-flow: row;
+                    place-items: start;
+                    width: 200%;
+                    height: 200%;
+                }
+        
+                .cell {
+                    display: flex;
+                    place-self: stretch;
+                }
+        
+                .typed, .typed-cursor {
+                    align-self: center;
+                }
+            
+                .hidden {
+                    display: none;
+                }
+            
+                .var {
+                    /*   color: #c678dd; Dark */
+                    color: #a626a4;
+                }
+            
+                .hex {
+                    /*   color: #61afef; Dark */
+                    color: #4078f2;
+                }
+            
+                .num,
+                .class {
+                    /*   color: #d19a66; Dark */
+                    color: #986801;
+                }
+            
+                .eq {
+                    /* color: #528BFF; Dark  */
+                    color: #526EFF;
+                }
+            
+                .prop,
+                .tag,
+                .element {
+                    /*   color: #e06c75;  Dark*/
+                    color: #e45649;
+                }
+            
+                .string {
+                    /*   color: #98c379; Dark*/
+                    color: #50a14f;
+                }
+            </style>
+        </div>
+        <div id="body" xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt<span class="tag">h1</span>&gt Hello World! &lt/<span class="tag">h1</span>&gt</p>
+            <p>&lt<span class="tag">p</span>&gt This is a HTML, CSS, and JS animation. &lt/<span class="tag">p</span>&gt</p>
+            <p>&lt<span class="tag">p</span>&gt Embedded in an SVG for your enjoyment! &lt/<span class="tag">p</span>&gt</p>
+            <p>&lt<span class="tag">p</span>&gt Thanks for visiting :) &lt/<span class="tag">p</span>&gt</p>
+            <p><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p>
+            <p><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p>
+            <p><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p>
+            <p><span class="element">*</span> { margin: <span class="num">0</span>; }</p>
+            <p><span class="element">*</span> { padding: <span class="num">0</span>; }</p>
+            <p><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p>
+    
+
+            <script>
+                function randRange(min, max) {
+                    return Math.round(Math.random() * (max - min + 1) + min);
+                }
+
+                function getTextWidth(text, font) {
+                    var canvas = document.createElement("canvas");
+                    var context = canvas.getContext("2d");
+                    context.font = font;
+                    canvas.remove();
+                    return context.measureText(text).width;
+                }
+
+                function pseudoRandNum(x, min, max) {
+                    a = min + (max-min)/2;
+                    n = ((a * x) % (max + 1)) / (max + 1)
+                    return Math.round(n * (max - min + 1) + min);
+                }
+
+                const animationLength = 30;
+                const minRowSpeed = 3;
+                const maxRowSpeed = 2;
+                const initRowPosX = 2;
+
+                var textStrings = [];
+            </script>
+        </div>
+    </foreignObject>
     
 
             <script>
