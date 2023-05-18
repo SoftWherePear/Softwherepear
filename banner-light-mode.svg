@@ -181,16 +181,7 @@
             </style>
         </div>
         <div id="body" xmlns="http://www.w3.org/1999/xhtml">
-            <p>&lt<span class="tag">h1</span>&gt Hello World! &lt/<span class="tag">h1</span>&gt</p>
-            <p>&lt<span class="tag">p</span>&gt This is a HTML, CSS, and JS animation. &lt/<span class="tag">p</span>&gt</p>
-            <p>&lt<span class="tag">p</span>&gt Embedded in an SVG for your enjoyment! &lt/<span class="tag">p</span>&gt</p>
-            <p>&lt<span class="tag">p</span>&gt Thanks for visiting :) &lt/<span class="tag">p</span>&gt</p>
-            <p><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p>
-            <p><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p>
-            <p><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p>
-            <p><span class="element">*</span> { margin: <span class="num">0</span>; }</p>
-            <p><span class="element">*</span> { padding: <span class="num">0</span>; }</p>
-            <p><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p>
+            <p>Test </p>
     
 
             <script>
