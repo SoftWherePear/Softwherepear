@@ -90,7 +90,6 @@
             </style>
         </div>
         <div id="body" xmlns="http://www.w3.org/1999/xhtml">
-            <p> &#60 </p>
             <p><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p>
             <p><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p>
             <p><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p>
