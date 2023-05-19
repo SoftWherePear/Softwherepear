@@ -1,11 +1,11 @@
 <svg fill="none" viewBox="0 0 1200 300" width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-       <style>
-           body{
-              padding: 40px;
+    <style>
+            foreignObject {
               background-color: #121212;  
             }
-
+       </style>
+    <foreignObject width="100%" height="100%">
+       <style>
             p {
               border-right: solid 3px rgba(0,255,0,.75);
               white-space: nowrap;
@@ -13,6 +13,7 @@
               font-family: 'Source Code Pro', monospace;  
               font-size: 28px;
               color: rgba(255,255,255,.70);
+              margin: 10% auto;
             }
 
             /* Animation */
@@ -36,7 +37,5 @@
             }
        </style>
        <p>This is a typewriter effect.</p>
-       <script>
-        </script>
     </foreignObject>
 </svg>
