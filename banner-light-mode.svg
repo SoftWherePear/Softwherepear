@@ -14,8 +14,28 @@
               font-size: 28px;
               color: rgba(255,255,255,.70);
               margin: 2% auto;
+            
+              animation: animated-text 4s steps(29,end) 1s infinite alternate both,
+              animated-cursor 600ms steps(29,end) infinite;
+            }
+             /* Animation */
+            p {
+             
             }
 
+            /* text animation */
+
+            @keyframes animated-text{
+              from{width: 0;}
+              to{width: 472px;}
+            }
+
+            /* cursor animations */
+
+            @keyframes animated-cursor{
+              from{border-right-color: rgba(0,255,0,.75);}
+              to{border-right-color: transparent;}
+            }
           
        </style>
        <p>This is a typewriter effect.</p>
