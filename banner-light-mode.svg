@@ -1,6 +1,6 @@
-<svg fill="none" width="1200" height="300" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%" onload="startup(evt)">
-        <div id="html" xmlns="http://www.w3.org/1999/xhtml">
+<svg fill="none" width="1200" height="300" xmlns="http://www.w3.org/2000/svg" onload="startup(evt)">
+    <foreignObject width="100%" height="100%" >
+        <div id="html" xmlns="http://www.w3.org/1999/xhtml" >
            <style>
                 p {
                   border-right: solid 3px rgba(0,255,0,.75);
@@ -27,14 +27,7 @@
            </style>
            <p id="demo">Hi</p>
            <script>
-               var svgDocument=null ;
-               function startup(evt) {
-                    O=evt.target
-                    svgDocument=O.ownerDocument
-                    svgRoot=svgDocument.documentElement
-                    svgDocument.getElementById("demo").innerHTML = "Date : " + Date();
-                }
-
+                    foreignObject.document.getElementById("demo").innerHTML = "Bro";
            </script>
         </div>
     </foreignObject>
