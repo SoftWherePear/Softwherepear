@@ -1,5 +1,5 @@
 <svg fill="none" width="1200" height="300" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
+    <foreignObject width="100%" height="100%" onload="startup(evt)">
         <div id="html" xmlns="http://www.w3.org/1999/xhtml">
            <style>
                 p {
@@ -27,9 +27,14 @@
            </style>
            <p id="demo">Hi</p>
            <script>
-               
-                    document.getElementById("demo").innerHTML = "Date : " + Date();
-               
+               var svgDocument=null ;
+               function startup(evt) {
+                    O=evt.target
+                    svgDocument=O.ownerDocument
+                    svgRoot=svgDocument.documentElement
+                    svgDocument.getElementById("demo").innerHTML = "Date : " + Date();
+                }
+
            </script>
         </div>
     </foreignObject>
