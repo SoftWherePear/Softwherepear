@@ -67,7 +67,7 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 <!-- Dark Mode -->
 <p align="center">
   <a href="https://github.com/Ashutosh00710/github-readme-activity-graph#gh-dark-mode-only">
-    <img alt="Activity Graph" src="https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&area=true&area_color=81FF00&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF#gh-dark-mode-only">  
+    <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&area=true&area_color=81FF00&bg_color=0D0C15&color=6562AF&title_color=FF5700&line=81FF00&point=FFFFFF#gh-dark-mode-only">  
   </a>
   <a href="https://git.io/streak-stats#gh-dark-mode-only">
     <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=ads-juicy-fresh#gh-dark-mode-only">
@@ -80,7 +80,7 @@ Here are some common tasks I’m asked to help with, but really anything you mig
 <!-- Light Mode -->
 <p align="center">
   <a href="https://github.com/Ashutosh00710/github-readme-activity-graph#gh-light-mode-only">
-    <img alt="Activity Graph" src="https://github-readme-activity-graph.cyclic.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&theme=vue&color=000000&title_color=41B883&bg_color=FFFFFF&point=41B883&area=true&area_color=41B883#gh-light-mode-only">  
+    <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Softwherepear&custom_title=My%20Contribution%20Graph&hide_border=true&theme=vue&color=000000&title_color=41B883&bg_color=FFFFFF&point=41B883&area=true&area_color=41B883#gh-light-mode-only">  
   </a>  
   <a href="https://git.io/streak-stats#gh-light-mode-only">
     <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com?user=Softwherepear&hide_border=true&mode=weekly&theme=vue#gh-dark-mode-only">
