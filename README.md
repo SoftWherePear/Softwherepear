@@ -9,6 +9,10 @@
   </a>
 </p> -->
 
+<!-- <p align="center">
+    <img style="width: 1000px; height: 200px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg" />
+</p> -->
+
 <!-- Dark Mode -->
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
