@@ -1,13 +1,14 @@
-<svg fill="none" width="1000" height="200" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%" >
-        <div id="html" xmlns="http://www.w3.org/1999/xhtml" >
-           <style>
-               :root {
+<svg fill="none" width="1000" height="150" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <style>
+          :root {
             --bg-color: #ffffff;
           }
 
           * {
             margin: 0;
+            padding: 0;
           }
 
           #background {
@@ -15,7 +16,7 @@
             position: relative;
             height: 100%;
             width: 100%;
-
+            background: var(--bg-color);
           }
 
           #grid {
@@ -28,10 +29,6 @@
             place-items: start;
             width: 200%;
             height: 200%;
-          }
-
-          .cell {
-            place-self: center stretch;
           }
 
           ul {
@@ -57,8 +54,8 @@
             position: relative;
             width: max-content;
           }
-
-         p::before,
+          
+          p::before,
           p::after {
             content: "";
             position: absolute;
@@ -67,14 +64,14 @@
             bottom: 0;
             left: 0;
           }
-
-               p::before {
+          
+          p::before {
             background: var(--bg-color);
             animation: typewriter var(--speed)
               steps(var(--chars)) infinite;
           }
-
-               p::after {
+          
+          p::after {
             width: 0.125em;
             height: 1rem;
             background: black;
@@ -82,7 +79,6 @@
                 steps(var(--chars)) infinite,
               blink 750ms steps(var(--chars)) infinite;
           }
-
 
           .row-1 {
             transform: translateX(2rem);
@@ -124,7 +120,7 @@
 
           @keyframes text-scroll {
             100% {
-              transform: translate(0, -3.75rem);
+              transform: translate(0, calc(1.25rem * -3));
             }
           }
 
@@ -133,7 +129,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(100px);
+                transform: translateX(var(--speed));
             }
          }
 
@@ -143,13 +139,319 @@
           }
         }
         </style>
-           <ul class="row-1">
-              <ul class="row-1">
+        <div id="background">
+          <div id="grid">
+            <ul class="row-1">
               <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
               <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
               <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
             </ul>
+            <ul class="row-1">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
             </ul>
+            <ul class="row-1">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class= "row-2">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class="row-4">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+            </ul>
+
+            <ul class="row-1">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class= "row-2">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class="row-4">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+            </ul>
+
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </foreignObject>
 </svg>
