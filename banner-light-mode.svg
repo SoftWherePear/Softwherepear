@@ -2,34 +2,154 @@
     <foreignObject width="100%" height="100%" >
         <div id="html" xmlns="http://www.w3.org/1999/xhtml" >
            <style>
-               * {
-                   background: #000;
-               }
-                p {
-                  border-right: solid 3px rgba(0,255,0,.75);
-                  white-space: nowrap;
-                  overflow: hidden;    
-                  font-family: 'Source Code Pro', monospace;  
-                  font-size: 28px;
-                  color: #fff;
-                }
+               :root {
+            --bg-color: #ffffff;
+          }
 
-                /* text animation */
+          * {
+            margin: 0;
+          }
 
-                @keyframes animated-text{
-                  from{width: 0;}
-                  to{width: 472px;}
-                }
+          #background {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
 
-                /* cursor animations */
+          }
 
-                @keyframes animated-cursor{
-                  from{border-right-color: rgba(0,255,0,.75);}
-                  to{border-right-color: transparent;}
-                }
-           </style>
-           <p id="demo">Hi</p>
-           
+          #grid {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: grid;
+            grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-flow: row;
+            place-items: start;
+            width: 200%;
+            height: 200%;
+          }
+
+          .cell {
+            place-self: center stretch;
+          }
+
+          ul {
+            padding-left: 0.25em;
+            height: 1.25rem;
+            overflow: hidden;
+            place-self: center stretch;
+          }
+
+          li {
+            list-style: none;
+            font-size: 1rem;
+            position: relative;
+            top: 0;
+            animation: text-scroll var(--duration) steps(3) infinite;
+          }
+          
+          p {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            position: relative;
+            font-family: 'Fira Mono', monospace;
+            position: relative;
+            width: max-content;
+          }
+
+         p::before,
+          p::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+               p::before {
+            background: var(--bg-color);
+            animation: typewriter var(--speed)
+              steps(var(--chars)) infinite;
+          }
+
+               p::after {
+            width: 0.125em;
+            height: 1rem;
+            background: black;
+            animation: typewriter var(--speed)
+                steps(var(--chars)) infinite,
+              blink 750ms steps(var(--chars)) infinite;
+          }
+
+
+          .row-1 {
+            transform: translateX(2rem);
+          }
+
+          .row-2 {
+            transform: translateX(-2rem);
+          }
+
+          .row-3 {
+            transform: translateX(3rem);
+          }
+
+          .row-4 {
+            transform: translateX(-5rem);
+          }
+
+          .row-5 {
+            transform: translateX(1rem);
+          }
+          
+          @keyframes typewriter {
+            0%, 5% {
+              left: 0%;
+            }
+            50%, 75% {
+              left: 100%;
+            }
+            100% {
+              left: 0;
+            }
+          }
+          
+          @keyframes blink {
+            to {
+              background: transparent;
+            }
+          }
+
+          @keyframes text-scroll {
+            100% {
+              transform: translate(0, -3.75rem);
+            }
+          }
+
+          @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100px);
+            }
+         }
+
+         @keyframes grid-scroll {
+          100% {
+            transform: translate(0, 150px);
+          }
+        }
+        </style>
+           <ul class="row-1">
+              <ul class="row-1">
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+            </ul>
+            </ul>
         </div>
     </foreignObject>
 </svg>
