@@ -4,6 +4,7 @@
         <style>
           :root {
             --bg-color: #ffffff;
+            --animation-length: 30s;
           }
 
           * {
@@ -29,10 +30,10 @@
             place-items: start;
             width: 200%;
             height: 200%;
+            animation: grid-scroll var(--animation-length) linear infinite;
           }
 
           ul {
-            padding-left: 0.25em;
             height: 1.25rem;
             overflow: hidden;
             place-self: center stretch;
@@ -40,14 +41,12 @@
 
           li {
             list-style: none;
-            font-size: 1rem;
             position: relative;
             top: 0;
             animation: text-scroll var(--duration) steps(3) infinite;
           }
           
           p {
-            color: #000;
             font-size: 1rem;
             line-height: 1.25rem;
             position: relative;
@@ -74,7 +73,7 @@
           
           p::after {
             width: 0.125em;
-            height: 1rem;
+            height: 1.25rem;
             background: black;
             animation: typewriter var(--speed)
                 steps(var(--chars)) infinite,
@@ -82,23 +81,71 @@
           }
 
           .row-1 {
-            transform: translateX(2rem);
+            --speed: 800px;
+            --offset: 2rem;
+            transform: translateX(var(--offset));
+            animation: slide var(--animation-length) linear infinite;
           }
 
           .row-2 {
-            transform: translateX(-2rem);
+            --speed: 700px;
+            --offset: -2rem;
+            transform: translateX(var(--offset));
+            animation: slide var(--animation-length) linear infinite;
           }
 
           .row-3 {
-            transform: translateX(3rem);
+            --speed: 1000px;
+            --offset: 3rem;
+            transform: translateX(var(--offset));
+            animation: slide var(--animation-length) linear infinite;
           }
 
           .row-4 {
-            transform: translateX(-5rem);
+            --speed: 1200px;
+            --offset: -5rem;
+            transform: translateX(var(--offset));
+            animation: slide var(--animation-length) linear infinite;
           }
 
           .row-5 {
-            transform: translateX(1rem);
+            --speed: 500px;
+            --offset: 1rem;
+            transform: translateX(var(--offset));
+            animation: slide var(--animation-length) linear infinite;
+          }
+
+          .var {
+            /*   color: #c678dd; Dark */
+            color: #a626a4;
+          }
+    
+          .hex {
+              /*   color: #61afef; Dark */
+              color: #4078f2;
+          }
+      
+          .num,
+          .class {
+              /*   color: #d19a66; Dark */
+              color: #986801;
+          }
+      
+          .eq {
+              /* color: #528BFF; Dark  */
+              color: #526EFF;
+          }
+      
+          .prop,
+          .tag,
+          .element {
+              /*   color: #e06c75;  Dark*/
+              color: #e45649;
+          }
+      
+          .string {
+              /*   color: #98c379; Dark*/
+              color: #50a14f;
           }
           
           @keyframes typewriter {
@@ -127,7 +174,7 @@
 
           @keyframes slide {
             0% {
-                transform: translateX(0);
+                transform: translateX(var(--offset));
             }
             100% {
                 transform: translateX(var(--speed));
@@ -143,313 +190,313 @@
         <div id="background">
           <div id="grid">
             <ul class="row-1">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class="row-1">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
             </ul>
             <ul class="row-1">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
             </ul>
             <ul class="row-1">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
 
-            <ul class= "row-2">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
+            <ul class="row-2">
+              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            </ul>
+            <ul class="row-2">
+              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-2">
+              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
             </ul>
             <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
             </ul>
             <ul class= "row-2">
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class= "row-2">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
             </ul>
 
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+            <ul class= "row-3">
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class= "row-3">
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            </ul>
+            <ul class= "row-3">
+              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-
-            <ul class="row-4">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
-            </ul>
-
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-            </ul>
-
-            <ul class="row-1">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
-            </ul>
-
-            <ul class= "row-2">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10.5s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 37s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-            </ul>
-
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30; --speed: 7s">This is a typewriter effect-3.</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
             </ul>
 
             <ul class="row-4">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
             </ul>
             <ul class="row-4">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class="row-4">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
             </ul>
             <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 30; --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class="row-4">
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 48s;"><p style="--chars: 30; --speed: 14s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
             </ul>
 
             <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
             </ul>
             <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
             <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 30;  --speed: 10s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
             </ul>
             <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-2.</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 30; --speed: 8s">This is a typewriter effect-3.</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
             </ul>
             <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-1.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-3.</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 30; --speed: 12s">This is a typewriter effect-2.</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+
+            <ul class="row-1">
+              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            </ul>
+            <ul class="row-1">
+              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+
+            <ul class="row-2">
+              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            </ul>
+            <ul class="row-2">
+              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-2">
+              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class= "row-2">
+              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            </ul>
+
+            <ul class= "row-3">
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class= "row-3">
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            </ul>
+            <ul class= "row-3">
+              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class="row-3">
+              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            </ul>
+
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class="row-4">
+              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            </ul>
+
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            </ul>
+            <ul class= "row-5">
+              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
             </ul>
           </div>
         </div>
