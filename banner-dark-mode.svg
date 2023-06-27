@@ -75,7 +75,7 @@
           p::after {
             width: 0.125em;
             height: 1.25rem;
-            background: var(--bg-color);
+            background: #CCCCCC;
             animation: typewriter var(--speed)
                 steps(var(--chars)) infinite,
               blink 750ms steps(var(--chars)) infinite;
@@ -157,7 +157,7 @@
           
           @keyframes blink {
             to {
-              background: #CCCCCC;
+              background: transparent;
             }
           }
 
