@@ -3,7 +3,7 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <style>
           :root {
-            --bg-color: #000000;
+            --bg-color: #282C34;
             --animation-length: 30s;
           }
 
@@ -47,7 +47,7 @@
           }
           
           p {
-            color: #ffffff;
+            color: #CCCCCC;
             font-size: 1rem;
             line-height: 1.25rem;
             position: relative;
@@ -75,7 +75,7 @@
           p::after {
             width: 0.125em;
             height: 1.25rem;
-            background: black;
+            background: var(--bg-color);
             animation: typewriter var(--speed)
                 steps(var(--chars)) infinite,
               blink 750ms steps(var(--chars)) infinite;
@@ -157,7 +157,7 @@
           
           @keyframes blink {
             to {
-              background: transparent;
+              background: #CCCCCC;
             }
           }
 
