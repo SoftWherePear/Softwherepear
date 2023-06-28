@@ -1,38 +1,15 @@
-<!-- <p align="center">
-  <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_dark.gif#gh-dark-mode-only">
-  <img style="width: 80vw" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/profile_banner_light.gif#gh-light-mode-only">
-</p> -->
-
-<!-- <p align="center">
-   <a href="https://github.com/DavidWells/advanced-markdown/blame/master/svg-with-css.svg">
-    <img alt="Click to see the source" height="400" src="https://raw.githubusercontent.com/DavidWells/advanced-markdown/master/svg-with-css.svg" width="800" />
+<p align="center">
+  <a href="https://github.com/DavidWells/advanced-markdown/blame/master/svg-with-css.svg">
+    <img alt="Profile welcome banner light mode" style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg#gh-light-mode-only" />
+    <img alt="Profile welcome banner dark mode" style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-dark-mode.svg#gh-dark-mode-only" />
   </a>
-</p> -->
-
-<p align="center">
-    <img style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg#gh-light-mode-only" />
-    <img style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-dark-mode.svg#gh-dark-mode-only" />
 </p>
-
-<!-- Dark Mode
-<p align="center">
- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg
-  <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-dark-mode-only">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=97C50F&vCenter=true&pause=1000&size=22#gh-dark-mode-only" /></a>
-</p>
-
-Light Mode
-<p align="center">
-   Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg 
-  <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-light-mode-only">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=41B883&vCenter=true&pause=1000&size=22#gh-light-mode-only" /></a>
-</p> -->
 
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
 
 ### Welcome to my page. I'm a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
 
-I've been coding for 8+ years, so I definitely have mastery over all the skills for Shopify developement. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 💯
+I've been coding for 8+ years, so I definitely have mastery over all the skills needed for Shopify developement. But you can never konw too much so I am always learning and have a very open mind. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 💯
 
 ⚡ Fun fact: I love to rock climb 🧗 and surf 🏄‍♂️
 
