@@ -3,7 +3,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         :root {
-          --bg-color: #282C34;
+          --bg-color: #0D1117;
           --animation-length: 30s;
         }
 
