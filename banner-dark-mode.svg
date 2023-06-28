@@ -1,501 +1,540 @@
 <svg fill="none" width="1000" height="150" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <style>
-          :root {
-            --bg-color: #282C34;
-            --animation-length: 30s;
-          }
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --bg-color: #282C34;
+          --animation-length: 30s;
+        }
 
-          * {
-            margin: 0;
-            padding: 0;
-          }
+        * {
+          margin: 0;
+          padding: 0;
+        }
 
-          #background {
-            overflow: hidden;
-            position: relative;
-            height: 150px;
-            width: 1000;
-            background: var(--bg-color);
-            filter: blur(2px);
-          }
+        #background {
+          overflow: hidden;
+          position: relative;
+          height: 150px;
+          width: 1000;
+          background: var(--bg-color);
+          filter: blur(2px);
+          z-index: 0;
+        }
 
-          #grid {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            display: grid;
-            grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-auto-flow: row;
-            place-items: start;
-            width: 200%;
-            height: 200%;
-            animation: grid-scroll var(--animation-length) linear infinite;
-          }
+        #grid {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          display: grid;
+          grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-auto-flow: row;
+          place-items: start;
+          width: 200%;
+          height: 200%;
+          animation: grid-scroll var(--animation-length) linear infinite;
+        }
 
-          ul {
-            height: 1.25rem;
-            overflow: hidden;
-            place-self: center stretch;
-          }
+        ul {
+          height: 1.25rem;
+          overflow: hidden;
+          place-self: center stretch;
+        }
 
-          li {
-            list-style: none;
-            position: relative;
-            top: 0;
-            animation: text-scroll var(--duration) steps(3) infinite;
+        li {
+          list-style: none;
+          position: relative;
+          top: 0;
+          animation: text-scroll var(--duration) steps(3) infinite;
+        }
+        
+        p {
+          color: #CCCCCC;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          position: relative;
+          font-family: 'Fira Mono', monospace;
+          position: relative;
+          width: max-content;
+        }
+        
+        p::before,
+        p::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        
+        p::before {
+          background: var(--bg-color);
+          animation: typewriter var(--speed)
+            steps(var(--chars)) infinite;
+        }
+        
+        p::after {
+          width: 0.125em;
+          height: 1.25rem;
+          background: #CCCCCC;
+          animation: typewriter var(--speed)
+              steps(var(--chars)) infinite,
+            blink 750ms steps(var(--chars)) infinite;
+        }
+
+        .row-1 {
+          --speed: 800px;
+          --offset: 2rem;
+          transform: translateX(var(--offset));
+          animation: slide var(--animation-length) linear infinite;
+        }
+
+        .row-2 {
+          --speed: 700px;
+          --offset: -2rem;
+          transform: translateX(var(--offset));
+          animation: slide var(--animation-length) linear infinite;
+        }
+
+        .row-3 {
+          --speed: 1000px;
+          --offset: 3rem;
+          transform: translateX(var(--offset));
+          animation: slide var(--animation-length) linear infinite;
+        }
+
+        .row-4 {
+          --speed: 1200px;
+          --offset: -5rem;
+          transform: translateX(var(--offset));
+          animation: slide var(--animation-length) linear infinite;
+        }
+
+        .row-5 {
+          --speed: 500px;
+          --offset: 1rem;
+          transform: translateX(var(--offset));
+          animation: slide var(--animation-length) linear infinite;
+        }
+
+        .var {
+          color: #c678dd;
+        }
+  
+        .hex {
+            color: #61afef;
+        }
+    
+        .num,
+        .class {
+            color: #d19a66;
+        }
+    
+        .eq {
+            color: #528BFF;
+        }
+    
+        .prop,
+        .tag,
+        .element {
+            color: #e06c75;
+        }
+    
+        .string {
+            color: #98c379;
+        }
+        
+        @keyframes typewriter {
+          0%, 5% {
+            left: 0%;
           }
-          
-          p {
-            color: #CCCCCC;
-            font-size: 1rem;
-            line-height: 1.25rem;
-            position: relative;
-            font-family: 'Fira Mono', monospace;
-            position: relative;
-            width: max-content;
+          50%, 75% {
+            left: 100%;
           }
-          
-          p::before,
-          p::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
+          100% {
             left: 0;
           }
-          
-          p::before {
-            background: var(--bg-color);
-            animation: typewriter var(--speed)
-              steps(var(--chars)) infinite;
-          }
-          
-          p::after {
-            width: 0.125em;
-            height: 1.25rem;
-            background: #CCCCCC;
-            animation: typewriter var(--speed)
-                steps(var(--chars)) infinite,
-              blink 750ms steps(var(--chars)) infinite;
-          }
-
-          .row-1 {
-            --speed: 800px;
-            --offset: 2rem;
-            transform: translateX(var(--offset));
-            animation: slide var(--animation-length) linear infinite;
-          }
-
-          .row-2 {
-            --speed: 700px;
-            --offset: -2rem;
-            transform: translateX(var(--offset));
-            animation: slide var(--animation-length) linear infinite;
-          }
-
-          .row-3 {
-            --speed: 1000px;
-            --offset: 3rem;
-            transform: translateX(var(--offset));
-            animation: slide var(--animation-length) linear infinite;
-          }
-
-          .row-4 {
-            --speed: 1200px;
-            --offset: -5rem;
-            transform: translateX(var(--offset));
-            animation: slide var(--animation-length) linear infinite;
-          }
-
-          .row-5 {
-            --speed: 500px;
-            --offset: 1rem;
-            transform: translateX(var(--offset));
-            animation: slide var(--animation-length) linear infinite;
-          }
-
-          .var {
-            color: #c678dd;
-          }
-    
-          .hex {
-              color: #61afef;
-          }
-      
-          .num,
-          .class {
-              color: #d19a66;
-          }
-      
-          .eq {
-              color: #528BFF;
-          }
-      
-          .prop,
-          .tag,
-          .element {
-              color: #e06c75;
-          }
-      
-          .string {
-              color: #98c379;
-          }
-          
-          @keyframes typewriter {
-            0%, 5% {
-              left: 0%;
-            }
-            50%, 75% {
-              left: 100%;
-            }
-            100% {
-              left: 0;
-            }
-          }
-          
-          @keyframes blink {
-            to {
-              background: transparent;
-            }
-          }
-
-          @keyframes text-scroll {
-            100% {
-              transform: translate(0, calc(1.25rem * -3));
-            }
-          }
-
-          @keyframes slide {
-            0% {
-                transform: translateX(var(--offset));
-            }
-            100% {
-                transform: translateX(var(--speed));
-            }
-         }
-
-         @keyframes grid-scroll {
-          100% {
-            transform: translate(0, 150px);
+        }
+        
+        @keyframes blink {
+          to {
+            background: transparent;
           }
         }
-        </style>
-        <div id="background">
-          <div id="grid">
-            <ul class="row-1">
-              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
 
-            <ul class="row-2">
-              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-2">
-              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-2">
-              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
+        @keyframes text-scroll {
+          100% {
+            transform: translate(0, calc(1.25rem * -3));
+          }
+        }
 
-            <ul class= "row-3">
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-3">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-3">
-              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
+        @keyframes slide {
+          0% {
+              transform: translateX(var(--offset));
+          }
+          100% {
+              transform: translateX(var(--speed));
+          }
+       }
 
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-            </ul>
+       @keyframes grid-scroll {
+        100% {
+          transform: translate(0, 150px);
+        }
+      }
+      </style>
+      <div id="background">
+        <div id="grid">
+          <ul class="row-1">
+            <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
 
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
+          <ul class="row-2">
+            <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-2">
+            <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-2">
+            <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
 
-            <ul class="row-1">
-              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-            </ul>
-            <ul class="row-1">
-              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
+          <ul class= "row-3">
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-3">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-3">
+            <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
 
-            <ul class="row-2">
-              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-2">
-              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-2">
-              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class= "row-2">
-              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
+          <ul class="row-4">
+            <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+          </ul>
 
-            <ul class= "row-3">
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-3">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-3">
-              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-3">
-              <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
+          <ul class= "row-5">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
 
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-              <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class="row-4">
-              <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
-              <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
-            </ul>
+          <ul class="row-1">
+            <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s;"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+          </ul>
+          <ul class="row-1">
+            <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
 
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
-              <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
-            </ul>
-            <ul class= "row-5">
-              <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
-              <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
-            </ul>
-          </div>
+          <ul class="row-2">
+            <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-2">
+            <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-2">
+            <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class= "row-2">
+            <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+
+          <ul class= "row-3">
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-3">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-3">
+            <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 39s;"><p style="--chars: 35; --speed: 13s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 28; --speed: 13s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 39s;"><p style="--chars: 33; --speed: 13s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 35; --speed: 10s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-3">
+            <li style="--duration: 21s;"><p style="--chars: 28; --speed: 7s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 31; --speed: 7s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 21s;"><p style="--chars: 16; --speed: 7s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+
+          <ul class="row-4">
+            <li style="--duration: 33s;"><p style="--chars: 23; --speed: 11s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 16; --speed: 11s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 42s;"><p style="--chars: 17; --speed: 14s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 33; --speed: 14s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 27s;"><p style="--chars: 35; --speed: 9s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 28; --speed: 9s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 27s;"><p style="--chars: 17; --speed: 9s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 33; --speed: 9s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 27s;"><p style="--chars: 16; --speed: 9s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 33s;"><p style="--chars: 19; --speed: 11s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 28; --speed: 11s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+            <li style="--duration: 33s;"><p style="--chars: 31; --speed: 11s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class="row-4">
+            <li style="--duration: 42s;"><p style="--chars: 23; --speed: 14s">&lt;<span class="tag">h1</span>&gt; Hello World! &lt;/<span class="tag">h1</span>&gt;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 19; --speed: 14s"><span class="var">var</span> fooBar <span class="eq">=</span> <span class="string">"baz"</span>;</p></li>
+            <li style="--duration: 42s;"><p style="--chars: 28; --speed: 14s"><span class="element">*</span> { background-color: <span class="num">#</span><span class="hex">000</span>; }</p></li>
+          </ul>
+
+          <ul class= "row-5">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 30s;"><p style="--chars: 31; --speed: 10s">&lt;<span class="tag">p</span>&gt; Thanks for visiting :) &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 16; --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 36s;"><p style="--chars: 33; --speed: 12s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 16; --speed: 12s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 36s;"><p style="--chars: 17; --speed: 12s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 24s;"><p style="--chars: 16; --speed: 8s"><span class="element">*</span> { margin: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 33; --speed: 8s">&lt;<span class="tag">p</span>&gt; This is pure HTML &amp; CSS! &lt;/<span class="tag">p</span>&gt;</p></li>
+            <li style="--duration: 24s;"><p style="--chars: 35; --speed: 8s"><span class="var">var</span> fooRay <span class="eq">=</span> [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</p></li>
+          </ul>
+          <ul class= "row-5">
+            <li style="--duration: 30s;"><p style="--chars: 16;  --speed: 10s"><span class="var">var</span> foo <span class="eq">=</span> <span class="string">"bar"</span>;</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 17; --speed: 10s"><span class="element">*</span> { padding: <span class="num">0</span>; }</p></li>
+            <li style="--duration: 30s;"><p style="--chars: 33; --speed: 10s">&lt;<span class="tag">p</span>&gt; Embedded in a SVG for u! &lt;/<span class="tag">p</span>&gt;</p></li>
+          </ul>
         </div>
       </div>
-    </foreignObject>
+      <style>
+        h1 {
+          font-family: "Source Code Pro", monospace;
+          position: relative;
+          width: max-content;
+          margin: auto;
+          transform: translateY(-125%);
+          color: transparent;
+          font-weight: 800;
+          -webkit-text-stroke: 2px #fff;
+          font-size: 9rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          line-height: 0.7em;
+          outline: none;
+          animation: glow 10s linear infinite;
+        }
+        
+        @keyframes glow {
+          0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 89.1%, 91% {
+            color: transparent;
+            -webkit-text-stroke: 2px #fff;
+            text-shadow: none;
+            -webkit-box-reflect: unset;
+          }
+          18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 89%, 91.1%, 100% {
+            color: #fff;
+            text-shadow: 0 0 10px #97C50F, 
+                         0 0 20px #97C50F, 
+                         0 0 40px #97C50F, 
+                         0 0 80px #97C50F,
+                         0 0 160px #97C50F;
+            -webkit-text-stroke: 0 #4d4d4d;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+          }
+        }
+      </style>
+      <h1 glow-text="Welcome!"> Welcome!</h1>
+    </div>
+  </foreignObject>
 </svg>
