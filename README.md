@@ -9,24 +9,24 @@
   </a>
 </p> -->
 
-<!-- <p align="center">
+<p align="center">
     <img style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg#gh-light-mode-only" />
     <img style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-dark-mode.svg#gh-dark-mode-only" />
-</p> -->
+</p>
 
-<!-- Dark Mode -->
+<!-- Dark Mode
 <p align="center">
-  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
+ Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg
   <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-dark-mode-only">
     <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=97C50F&vCenter=true&pause=1000&size=22#gh-dark-mode-only" /></a>
 </p>
 
-<!-- Light Mode -->
+Light Mode
 <p align="center">
-  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
+   Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg 
   <a href="https://github.com/DenverCoder1/readme-typing-svg#gh-light-mode-only">
     <img src="https://readme-typing-svg.demolab.com/?lines=Shopify%20expert;Front-end%20web%20developer;Experienced%20UI%2FUX%20Designer;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things%21&font=Fira%20Code&center=true&width=440&height=45&color=41B883&vCenter=true&pause=1000&size=22#gh-light-mode-only" /></a>
-</p>
+</p> -->
 
 # <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"> Hey there, nice to see you! :-)<br>
 
