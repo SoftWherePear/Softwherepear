@@ -10,7 +10,7 @@
 </p> -->
 
 <!-- <p align="center">
-    <img style="width: 1000px; height: 200px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg" />
+    <img style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg" />
 </p> -->
 
 <!-- Dark Mode -->
