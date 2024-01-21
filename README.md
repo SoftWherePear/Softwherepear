@@ -3,7 +3,7 @@
     <img alt="Profile welcome banner light mode" style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-light-mode.svg#gh-light-mode-only" />
   </a>
   <a href="https://github.com/SoftWherePear/Github-Profile-Banner/tree/main#gh-dark-mode-only">
-    <img alt="Profile welcome banner dark mode" style="width: 1000px; height: 150px" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-dark-mode.svg#gh-dark-mode-only" />
+    <img alt="Profile welcome banner dark mode" style="width: 100%" alt="Profile Banner" src="https://raw.githubusercontent.com/Softwherepear/Softwherepear/master/banner-dark-mode.svg#gh-dark-mode-only" />
   </a>
 </p>
 
