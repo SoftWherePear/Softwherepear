@@ -11,7 +11,7 @@
 
 ### I'm a Shopify Web-Developer from <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/2048px-United-states_flag_icon_round.svg.png" width="16"> CA, US.
 
-I've been coding for 8+ years, so I definitely have mastery over all the skills needed for Shopify developement. But you can never konw too much so I am always learning and have a very open mind. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 💯
+I've been coding for 8+ years, so I definitely have mastery over all the skills needed for Shopify developement. But you can never know too much so I am always learning and have a very open mind. Happy to say, I am dedicated to making your Shopify dreams come true! Let me know what your heart desires and we can work together to make it real 💯
 
 ⚡ Fun fact: I love to rock climb 🧗 and surf 🏄‍♂️
 
